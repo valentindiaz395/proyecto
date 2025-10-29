@@ -1,0 +1,11 @@
+.conteiner{
+	display: flex;
+	justify-content:  center;
+}
+img{
+ height: 8rem;
+ object-fit: cover;	
+}
+@media (max-widht: 750px){
+
+}
