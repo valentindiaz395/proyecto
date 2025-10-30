@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-reptil',
+  selector: 'app-serpiente',
   imports: [],
-  templateUrl: './reptil.html',
-  styleUrl: './reptil.css',
+  templateUrl: './serpiente.html',
+  styleUrl: './serpiente.css',
 })
-export class Reptil {
+export class Serpiente {
 
 }
