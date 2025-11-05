@@ -11,7 +11,6 @@ import { Lagarto } from './paginas/product/section/lagarto/lagarto';
 import { Ranas } from './paginas/product/section/ranas/ranas';
 import { Serpiente } from './paginas/product/section/serpiente/serpiente';
 import { Tarantulas } from './paginas/product/section/tarantulas/tarantulas';
-import { Tortugas } from './paginas/product/section/tortugas/tortugas';
 
 export const routes: Routes = [
 	{path:`` , component : Home},
@@ -26,11 +25,4 @@ export const routes: Routes = [
     {path:`section/ranas` , component : Ranas},
 	{path:`section/serpiente` , component : Serpiente},
 	{path:`section/tarantulas` , component : Tarantulas},
-	{path:`section/tortugas` , component : Tortugas}
-
-
-
-
-
-
 ];

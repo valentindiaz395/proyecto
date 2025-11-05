@@ -1,11 +1,34 @@
-.conteiner{
+.container {
 	display: flex;
-	justify-content:  center;
+	justify-content: center;
+	flex-wrap: wrap; /* permite que las imágenes salten de línea */
+	gap: 10px; /* espacio entre las imágenes */
 }
-img{
- height: 8rem;
- object-fit: cover;	
-}
-@media (max-widht: 750px){
 
+
+img {
+	height: 8rem;
+	width: auto;
+	object-fit: cover;
+	border-radius: 10px;
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Animación al pasar el mouse */
+img:hover {
+	transform: scale(1.08);
+	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* ✅ Media query para pantallas pequeñas */
+@media (max-width: 750px) {
+	.container {
+		flex-direction: column; /* coloca las imágenes en una sola columna */
+		align-items: center;
+	}
+
+	img {
+		height: 10rem; /* un poco más grandes en móviles */
+		width: 90%;
+	}
 }
