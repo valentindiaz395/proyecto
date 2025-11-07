@@ -1,28 +1,24 @@
-<p>geckos works!</p>
+<h1 id="titleGeckos">🐉 Geckos Exóticos a la Venta 🐾</h1>
+
 <div class="container">
 	<div class="row">
 		<div *ngFor="let i of infogeckos" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
-			<div class="card">
+			<div class="card gecko-card">
 				<img src="{{ i.img }}" class="card-img-top" alt="{{ i.img }}">
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">
-						{{ i.nombre }}
-
+					<h5 class="card-title text-success">Compra tu {{ i.nombre }}</h5>
+					<p class="card-text subtitulo">
+						Especie: {{ i.especie }}
 					</p>
 					<p class="card-text">
-						{{ i.especie}}
-
+						Stock disponible: {{ i.stock }}
 					</p>
-					<p class="card-text">
-						{{ i.stock}}
-
+					<p class="card-text precio">
+						Precio: ${{ i.precio }}
 					</p>
-					<p class="card-text">
-						{{ i.precio}}
-
-					</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<a href="#" class="btn btn-success comprar-btn">Agregar al carrito 🛒</a>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>

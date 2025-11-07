@@ -1,34 +1,65 @@
-.container {
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap; /* permite que las imágenes salten de línea */
-	gap: 10px; /* espacio entre las imágenes */
+/* Fondo y tipografía */
+body {
+  background-color: #f5f5f5; /* color suave para toda la página */
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
+/* Título principal */
+#title {
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: #222;
+}
 
-img {
-	height: 8rem;
-	width: auto;
-	object-fit: cover;
-	border-radius: 10px;
-	transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Subtítulo */
+#subtitle {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 1.2rem;
+  color: #555;
+}
+
+/* Contenedor de imágenes: horizontal y con salto de línea si es necesario */
+.container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* permite que las imágenes salten de línea */
+  gap: 10px; /* espacio entre las imágenes */
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Cada imagen dentro de los enlaces */
+.image-link img {
+  height: 8rem;
+  width: auto;
+  object-fit: cover;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: block;
 }
 
 /* Animación al pasar el mouse */
-img:hover {
-	transform: scale(1.08);
-	box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+.image-link img:hover {
+  transform: scale(1.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* ✅ Media query para pantallas pequeñas */
+/* Responsive para móviles */
 @media (max-width: 750px) {
-	.container {
-		flex-direction: column; /* coloca las imágenes en una sola columna */
-		align-items: center;
-	}
+  .container {
+    flex-direction: column; /* coloca las imágenes en una sola columna */
+    align-items: center;
+  }
 
-	img {
-		height: 10rem; /* un poco más grandes en móviles */
-		width: 90%;
-	}
+  .image-link img {
+    height: 10rem; /* un poco más grandes en móviles */
+    width: 90%;     /* ocupa casi todo el ancho */
+  }
 }

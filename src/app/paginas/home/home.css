@@ -1,0 +1,72 @@
+body {
+  background-color: #000000;
+  font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-weight: 700;
+  color: #000000;
+  font-size: 2.5rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  position: relative;
+  animation: fadeInDown 1s ease both;
+}
+
+/* Línea verde decorativa debajo del título */
+h1::after {
+  content: "";
+  width: 120px;
+  height: 4px;
+  background: #000000ce;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* Animación del título (aparece desde arriba) */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h4 {
+  text-align: center;
+  color: #000000;
+  margin-bottom: 40px;
+}
+
+.carousel-item img {
+  height: 500px;
+  object-fit: cover;
+  filter: brightness(75%);
+}
+
+.carousel-caption {
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.carousel-caption h5 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.carousel-caption p {
+  color: #e0e0e0;
+  font-size: 1.1rem;
+}
+
+footer {
+  background: #000000;
+}

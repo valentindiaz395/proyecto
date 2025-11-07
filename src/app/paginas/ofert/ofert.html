@@ -1,29 +1,27 @@
-<h1 id="titleOfert">Ofertas increibles</h1>
-		
+<h1 id="titleOfert">Ofertas increíbles</h1>
+
 <div class="container">
 	<div class="row">
 		<div *ngFor="let i of animalesOfertas" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
-			<div class="card">
+			<div class="card product-card">
 				<img src="{{ i.img }}" class="card-img-top" alt="{{ i.img }}">
 				<div class="card-body">
 					<h5 class="card-title">Card title</h5>
-					<p class="card-text">
+					<p class="card-text subtitulo">
 						{{ i.nombre }}
-
 					</p>
-					<p class="card-text">
+					<p class="card-text subtitulo">
 						{{ i.especie}}
-
 					</p>
 					<p class="card-text">
-						{{ i.stock}}
-
+						Stock: {{ i.stock}}
 					</p>
-					<p class="card-text">
-						{{ i.precio}}
-
+					<p class="card-text precio">
+						${{ i.precio}}
 					</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+					<a href="#" class="btn btn-primary comprar-btn">Comprar</a>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>

@@ -31,7 +31,7 @@ export class Camaleones {
   /**
    * 
    * 
-   * @descriptionmetodoi para ver mas informacion de un nproducto.
+   * @description metodo para ver mas informacion de un nproducto.
    * recibe como parametro un producto de tipi "any" y lo asigna a la variable 
    * "productosseleccionado"
    */

@@ -1,0 +1,18 @@
+<div class="container">
+	<h1>Nuevo producto</h1>
+	inaertamos directiva formGroup en una etiqueta 
+	<form {formGroup}="nuevoproducto" >
+		<div class="mb-3">
+			<label for="titulo" class="form-label">Titulo</label>
+			<input formControlName="titulo" id="titulo" type="text" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label formControlName="descripcion" for="descripcion" class="form-label">Titulo</label>
+			<input id="descripcion" type="text" class="form-control">
+		</div>
+		<div class="mb-3">
+			<label formControlName="precio" for="precio" class="form-label">Titulo</label>
+			<input id="precio" type="text" class="form-control">
+		</div>
+	</form>
+</div>

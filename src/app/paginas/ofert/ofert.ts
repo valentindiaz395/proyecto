@@ -21,7 +21,25 @@ export class Ofert {
         img:"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
         alt:""
       },{
-        id:2,
+        id:3,
+        nombre:"camaleon",
+        especie:"reptil",
+        stock:2,
+        precio:1000,
+        img:"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        alt:""
+      },{
+          id:2,
+        nombre:"camaleon",
+        especie:"reptil",
+        stock:2,
+        precio:1000,
+        img:"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        alt:""
+
+      },
+      {
+          id:4,
         nombre:"camaleon",
         especie:"reptil",
         stock:2,

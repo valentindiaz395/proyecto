@@ -1,0 +1,146 @@
+/* ===============================
+   🌵 Estilos Generales Lagartos
+   =============================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #f5f3e7, #e1c699);
+  color: #3e2723;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ===============================
+   🦎 Título principal animado
+   =============================== */
+p {
+  text-align: center;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 40px 0 20px;
+  text-transform: uppercase;
+  color: #4e342e;
+  letter-spacing: 2px;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease both;
+}
+
+/* ✨ Línea decorativa simulando arena */
+p::after {
+  content: "";
+  display: block;
+  width: 160px;
+  height: 5px;
+  background: linear-gradient(90deg, #fbc02d, #ffb300);
+  margin: 10px auto 0;
+  border-radius: 10px;
+  animation: growLine 1.2s ease forwards;
+}
+
+/* ===============================
+   🐊 Tarjetas de producto
+   =============================== */
+.card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #fffaf0;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 8px 20px rgba(121, 85, 72, 0.25);
+  animation: fadeInUp 0.9s ease both;
+  position: relative;
+}
+
+/* 📸 Imagen del lagarto */
+.card img {
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+/* 🐾 Hover: brillo y movimiento */
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 15px 35px rgba(121, 85, 72, 0.4);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.1);
+}
+
+/* ===============================
+   🧾 Texto dentro de la tarjeta
+   =============================== */
+.card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #5d4037;
+  margin-bottom: 8px;
+}
+
+.card-text {
+  color: #6d4c41;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+/* ===============================
+   ☀️ Botón de compra
+   =============================== */
+.btn-primary {
+  background: linear-gradient(90deg, #f9a825, #ff8f00);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: #fff;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(255, 167, 38, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #ffb300, #ff6f00);
+  transform: scale(1.08);
+  box-shadow: 0 0 18px rgba(255, 143, 0, 0.6);
+}
+
+/* ===============================
+   ✨ Animaciones
+   =============================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 160px;
+    opacity: 1;
+  }
+}

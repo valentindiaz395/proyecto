@@ -1,0 +1,132 @@
+/* ===============================
+   🌴 Fondo general tropical
+   =============================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #00c853, #aeea00);
+  min-height: 100vh;
+  color: #222;
+}
+
+/* ===============================
+   🦎 Título principal
+   =============================== */
+#titleGeckos {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin: 40px 0 30px;
+  color: #ffffff;
+  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
+  animation: fadeInDown 1s ease both;
+  letter-spacing: 1px;
+}
+
+/* Línea decorativa debajo del título */
+#titleGeckos::after {
+  content: "";
+  width: 130px;
+  height: 5px;
+  background: #ffffff;
+  display: block;
+  margin: 10px auto 0;
+  border-radius: 10px;
+}
+
+/* ===============================
+   💳 Tarjetas de geckos
+   =============================== */
+.gecko-card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  background: #fff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+  animation: fadeInUp 0.7s ease both;
+}
+
+/* 📸 Imagen del gecko */
+.gecko-card img {
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Hover: sube y hace zoom */
+.gecko-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.gecko-card:hover img {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   🧾 Texto dentro de la tarjeta
+   =============================== */
+.card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Subtítulo */
+.subtitulo {
+  color: #555;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+/* 💰 Precio */
+.precio {
+  color: #2e7d32;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 8px 0;
+}
+
+/* ===============================
+   🛒 Botón de compra
+   =============================== */
+.comprar-btn {
+  background: linear-gradient(90deg, #00c853, #64dd17);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.comprar-btn:hover {
+  background: linear-gradient(90deg, #43a047, #76ff03);
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px rgba(100, 255, 50, 0.5);
+}
+
+/* ===============================
+   ✨ Animaciones de entrada
+   =============================== */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
