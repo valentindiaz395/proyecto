@@ -1,62 +1,38 @@
 /* ===============================
-   🌴 Fondo general tropical
+   🦎 Estilos Generales Modernos (Geckos)
    =============================== */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #00c853, #aeea00);
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  color: #000000;
   min-height: 100vh;
-  color: #222;
 }
 
 /* ===============================
-   🦎 Título principal
-   =============================== */
-#titleGeckos {
-  text-align: center;
-  font-weight: 700;
-  font-size: 2.8rem;
-  margin: 40px 0 30px;
-  color: #ffffff;
-  text-shadow: 2px 3px 10px rgba(0, 0, 0, 0.4);
-  animation: fadeInDown 1s ease both;
-  letter-spacing: 1px;
-}
-
-/* Línea decorativa debajo del título */
-#titleGeckos::after {
-  content: "";
-  width: 130px;
-  height: 5px;
-  background: #ffffff;
-  display: block;
-  margin: 10px auto 0;
-  border-radius: 10px;
-}
-
-/* ===============================
-   💳 Tarjetas de geckos
+   💳 Tarjetas de producto animadas
    =============================== */
 .gecko-card {
   border: none;
-  border-radius: 15px;
+  border-radius: 18px;
   overflow: hidden;
-  background: #fff;
+  background: #ffffff;
   transition: transform 0.4s ease, box-shadow 0.4s ease;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  animation: fadeInUp 0.7s ease both;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  animation: fadeInUp 0.8s ease both;
+  position: relative;
 }
 
-/* 📸 Imagen del gecko */
+/* 📸 Imagen del producto */
 .gecko-card img {
   height: 230px;
   object-fit: cover;
   transition: transform 0.4s ease;
-}
+}~
 
-/* Hover: sube y hace zoom */
+/* 🔥 Hover: tarjeta sube y hace zoom */
 .gecko-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+  transform: translateY(-12px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
 }
 
 .gecko-card:hover img {
@@ -64,62 +40,52 @@ body {
 }
 
 /* ===============================
-   🧾 Texto dentro de la tarjeta
+   🧾 Contenido de la tarjeta
    =============================== */
 .card-body {
   text-align: center;
-  padding: 20px;
+  padding: 22px;
 }
 
-/* Subtítulo */
 .subtitulo {
-  color: #555;
+  color: #4e4e4e;
   font-size: 1rem;
   font-weight: 500;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
-/* 💰 Precio */
 .precio {
-  color: #2e7d32;
-  font-size: 1.3rem;
+  color: #000000;
+  font-size: 1.4rem;
   font-weight: 700;
-  margin: 8px 0;
+  margin: 10px 0;
 }
 
 /* ===============================
-   🛒 Botón de compra
+   🛒 Botón de compra animado
    =============================== */
 .comprar-btn {
-  background: linear-gradient(90deg, #00c853, #64dd17);
+  background: linear-gradient(90deg, #000000);
   border: none;
   border-radius: 30px;
   padding: 10px 25px;
   font-weight: 600;
   color: white;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
+  text-decoration: none;
+  display: inline-block;
 }
 
 .comprar-btn:hover {
-  background: linear-gradient(90deg, #43a047, #76ff03);
+  background: linear-gradient(90deg, #000000);
   transform: scale(1.08);
-  box-shadow: 0px 0px 15px rgba(100, 255, 50, 0.5);
+  box-shadow: 0px 0px 15px rgb(0, 0, 0);
 }
 
 /* ===============================
    ✨ Animaciones de entrada
    =============================== */
-@keyframes fadeInDown {
-  from {
-    opacity: 0;
-    transform: translateY(-30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
 @keyframes fadeInUp {
   from {
     opacity: 0;

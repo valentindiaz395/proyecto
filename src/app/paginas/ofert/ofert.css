@@ -3,8 +3,8 @@
    =============================== */
 body {
   font-family: 'Poppins', sans-serif;
-  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
-  color: #2a2a2a;
+  background: linear-gradient(135deg, #2be53a, #c8e6c9);
+  color: #000000;
   min-height: 100vh;
 }
 
@@ -13,7 +13,7 @@ body {
    =============================== */
 #titleOfert {
   text-align: center;
-  color: #1b5e20;
+  color: #000000;
   font-weight: 800;
   font-size: 2.8rem;
   margin: 40px 0 30px;
@@ -29,7 +29,7 @@ body {
   display: block;
   width: 140px;
   height: 5px;
-  background: linear-gradient(90deg, #00c853, #76ff03);
+  background: linear-gradient(90deg, #000000, #000000);
   margin: 12px auto 0;
   border-radius: 10px;
   animation: growLine 1.2s ease forwards;
@@ -84,7 +84,7 @@ body {
 
 /* 💰 Precio */
 .precio {
-  color: #1b5e20;
+  color: #000000;
   font-size: 1.4rem;
   font-weight: 700;
   margin: 10px 0;
@@ -94,20 +94,20 @@ body {
    🛒 Botón de compra animado
    =============================== */
 .comprar-btn {
-  background: linear-gradient(90deg, #00c853, #64dd17);
+  background: linear-gradient(90deg, #000000, #000000);
   border: none;
   border-radius: 30px;
   padding: 10px 25px;
   font-weight: 600;
   color: white;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgba(76, 175, 80, 0.4);
+  box-shadow: 0 4px 10px rgb(0, 0, 0);
 }
 
 .comprar-btn:hover {
-  background: linear-gradient(90deg, #43a047, #76ff03);
+  background: linear-gradient(90deg, #000000, #000000);
   transform: scale(1.08);
-  box-shadow: 0px 0px 15px rgba(100, 255, 50, 0.5);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
 }
 
 /* ===============================

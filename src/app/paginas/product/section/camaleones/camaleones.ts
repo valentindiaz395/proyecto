@@ -18,7 +18,37 @@ export class Camaleones {
         especie: "lagarto",
         stock: 29,
         precio: 2000,
-        img: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img: "/img/camaleon1.jpeg",
+        alt: "espere",
+        decripcion:""
+      },
+       {
+        id: 2,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/camaleon2.jpeg",
+        alt: "espere",
+        decripcion:""
+      },
+       {
+        id: 3,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/camaleon.jpeg",
+        alt: "espere",
+        decripcion:""
+      },
+       {
+        id: 3,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/camaleon4.jpg",
         alt: "espere",
         decripcion:""
       }

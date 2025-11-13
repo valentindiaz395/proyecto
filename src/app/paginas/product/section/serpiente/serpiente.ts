@@ -13,11 +13,38 @@ export class Serpiente {
     this.infoserpiente = [
       {
         id:1,
+        nombre: "Serpiente",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/s2.jpeg",
+        alt: "espere"
+      },
+      {
+        id:1,
         nombre: "lagarto argentino",
         especie: "lagarto",
         stock: 29,
         precio: 2000,
-        img: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img: "/img/s3.jpeg",
+        alt: "espere"
+      },
+      {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/s4.jpeg",
+        alt: "espere"
+      },
+      {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/s11.jpeg",
         alt: "espere"
       }
       ]

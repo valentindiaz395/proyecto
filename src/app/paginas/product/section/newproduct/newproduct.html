@@ -1,7 +1,7 @@
 <div class="container">
 	<h1>Nuevo producto</h1>
 	inaertamos directiva formGroup en una etiqueta 
-	<form {formGroup}="nuevoproducto" >
+	<form [formGroup]="nuevoproducto" (ngSubmit)="creartarjeta()" >
 		<div class="mb-3">
 			<label for="titulo" class="form-label">Titulo</label>
 			<input formControlName="titulo" id="titulo" type="text" class="form-control">
@@ -14,5 +14,10 @@
 			<label formControlName="precio" for="precio" class="form-label">Titulo</label>
 			<input id="precio" type="text" class="form-control">
 		</div>
+		<button type="submit" class="btn btn-primary w-100" [disabled]="nuevoproducto"></button>
 	</form>
+	<ul class="list-group"  *ngFor="let tarjeta of coleccionproductos">
+  <li class="list-group-item">{{tarjeta.titulo}} = {{tarjeta.precio}}</li>
+>
+</ul>
 </div>

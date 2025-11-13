@@ -18,7 +18,7 @@ export class Ofert {
         especie:"reptil",
         stock:2,
         precio:1000,
-        img:"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img:"/img/r1.jpeg",
         alt:""
       },{
         id:3,
@@ -26,7 +26,7 @@ export class Ofert {
         especie:"reptil",
         stock:2,
         precio:1000,
-        img:"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img:"/img/l1.jpeg",
         alt:""
       },{
           id:2,
@@ -34,7 +34,7 @@ export class Ofert {
         especie:"reptil",
         stock:2,
         precio:1000,
-        img:"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img:"/img/g1.jpg",
         alt:""
 
       },
@@ -44,7 +44,7 @@ export class Ofert {
         especie:"reptil",
         stock:2,
         precio:1000,
-        img:"https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img:"/img/camaleon4.jpg",
         alt:""
       }
     ]

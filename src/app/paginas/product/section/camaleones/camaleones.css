@@ -1,0 +1,162 @@
+/* ===============================
+   🦎 Estilos Generales Modernos
+   =============================== */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+  color: #2a2a2a;
+  min-height: 100vh;
+}
+
+/* ===============================
+   🏷️ Título principal animado
+   =============================== */
+#titleCamaleon {
+  text-align: center;
+  color: #000000;
+  font-weight: 800;
+  font-size: 2.8rem;
+  margin: 40px 0 30px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  text-shadow: 2px 3px 8px rgba(0, 0, 0, 0.3);
+  animation: fadeInDown 1s ease both;
+}
+
+/* ✨ Línea decorativa bajo el título */
+#titleCamaleon::after {
+  content: "";
+  display: block;
+  width: 140px;
+  height: 5px;
+  background: linear-gradient(90deg, #000000, #000000);
+  margin: 12px auto 0;
+  border-radius: 10px;
+  animation: growLine 1.2s ease forwards;
+}
+
+/* ===============================
+   💳 Tarjetas de producto animadas
+   =============================== */
+.card {
+  border: none;
+  border-radius: 18px;
+  overflow: hidden;
+  background: #ffffff;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+  animation: fadeInUp 0.8s ease both;
+  position: relative;
+}
+
+/* 📸 Imagen del producto */
+.card img {
+  height: 230px;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* 🔥 Hover: tarjeta sube y hace zoom */
+.card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover img {
+  transform: scale(1.08);
+}
+
+/* ===============================
+   🧾 Contenido de la tarjeta
+   =============================== */
+.card-body {
+  text-align: center;
+  padding: 22px;
+}
+
+/* 🦜 Subtítulo o texto */
+.card-text {
+  color: #000000;
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+/* 💰 Precio o info destacada */
+.precio {
+  color: #050505;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 10px 0;
+}
+
+/* ===============================
+   🛒 Botón animado
+   =============================== */
+.btn-primary {
+  background: linear-gradient( #000000);
+  border: none;
+  border-radius: 30px;
+  padding: 10px 25px;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(90deg, #000000, #000000);
+  transform: scale(1.08);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* ===============================
+   ✨ Animaciones de entrada
+   =============================== */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes growLine {
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 140px;
+    opacity: 1;
+  }
+}
+
+/* ===============================
+   🎞️ Modal limpio
+   =============================== */
+.modal-content {
+  background-color: #ffffff;
+  color: #000000;
+  border-radius: 15px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-body img {
+  width: 100%;
+  border-radius: 12px;
+}

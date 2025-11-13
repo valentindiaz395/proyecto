@@ -60,6 +60,26 @@ body {
 
   .image-link img {
     height: 10rem; /* un poco más grandes en móviles */
-    width: 90%;     /* ocupa casi todo el ancho */
+    width: 100%;     /* ocupa casi todo el ancho */
   }
+}
+/* === Título sobre las imágenes, minimalista === */
+.img-container {
+  position: relative; /* Permite ubicar el texto encima */
+}
+
+.img-title {
+  position: absolute;
+  bottom: 10px;           /* Texto al pie de la imagen */
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: white;
+  background: rgba(0, 0, 0, 0.4); /* Fondo negro semitransparente */
+  padding: 6px 0;
+  font-size: 1.1rem;
+}
+
+.img-container:hover .img-title {
+  background: rgba(0, 0, 0, 0.6); /* Oscurece un poco al pasar el mouse */
 }

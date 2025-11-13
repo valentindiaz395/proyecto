@@ -20,7 +20,34 @@ export class Ranas {
           especie: "lagarto",
           stock: 29,
           precio: 2000,
-          img: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+          img: "/img/r1.jpeg",
+          alt: "espere"
+        },
+         {
+          id:1,
+          nombre: "lagarto argentino",
+          especie: "lagarto",
+          stock: 29,
+          precio: 2000,
+          img: "/img/r2.jpeg",
+          alt: "espere"
+        },
+         {
+          id:1,
+          nombre: "lagarto argentino",
+          especie: "lagarto",
+          stock: 29,
+          precio: 2000,
+          img: "/img/r3.jpeg",
+          alt: "espere"
+        },
+         {
+          id:1,
+          nombre: "lagarto argentino",
+          especie: "lagarto",
+          stock: 29,
+          precio: 2000,
+          img: "/img/r4.jpeg",
           alt: "espere"
         }
         ]

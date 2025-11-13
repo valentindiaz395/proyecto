@@ -1,0 +1,35 @@
+/* 🌴 Estilos Tropicales Animados */
+  .navbar {
+    background: linear-gradient(135deg, #ffffff, #f7fbf7);
+    transition: background 0.6s ease-in-out;
+  }
+
+  .navbar:hover {
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+  }
+
+  .logo {
+    transition: transform 0.5s ease;
+  }
+
+  .logo:hover {
+    transform: rotate(-10deg) scale(1.1);
+  }
+
+  .nav-link {
+    font-weight: 500;
+    transition: color 0.3s, transform 0.3s;
+  }
+
+  .nav-link:hover {
+    color: #19211e90;
+    transform: scale(1.1);
+  }
+
+  .navbar-brand span {
+    transition: color 0.5s;
+  }
+
+  .navbar-brand:hover span {
+    color: #242d2a80;
+  }

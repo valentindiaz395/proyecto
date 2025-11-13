@@ -17,10 +17,41 @@ export class Tarantulas {
         especie: "lagarto",
         stock: 29,
         precio: 2000,
-        img: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img: "/img/t2.jpeg",
+        alt: "espere",
+        decripcion: ""
+      },
+       {
+        id: 1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/t3.jpg",
+        alt: "espere",
+        decripcion: ""
+      },{
+        id: 1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/t4.jpg",
         alt: "espere",
         decripcion: ""
       }
+       ,{
+        id: 1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/t1.jpg",
+        alt: "espere",
+        decripcion: ""
+      }
+       
+      
     ]
 
   }

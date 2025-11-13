@@ -19,7 +19,34 @@ export class Lagarto {
         especie: "lagarto",
         stock: 29,
         precio: 2500,
-        img: "/img/OIP.jpeg",
+        img: "/img/l1.jpeg",
+        alt: "espere"
+      },
+       {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2500,
+        img: "/img/l2.jpeg",
+        alt: "espere"
+      },
+       {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2500,
+        img: "/img/l3.jpeg",
+        alt: "espere"
+      },
+       {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2500,
+        img: "/img/l4.jpeg",
         alt: "espere"
       }
       ]

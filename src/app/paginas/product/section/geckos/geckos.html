@@ -1,12 +1,10 @@
-<h1 id="titleGeckos">🐉 Geckos Exóticos a la Venta 🐾</h1>
-
 <div class="container">
 	<div class="row">
 		<div *ngFor="let i of infogeckos" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
 			<div class="card gecko-card">
 				<img src="{{ i.img }}" class="card-img-top" alt="{{ i.img }}">
 				<div class="card-body">
-					<h5 class="card-title text-success">Compra tu {{ i.nombre }}</h5>
+					<h5 class="card-title text">Compra tu {{ i.nombre }}</h5>
 					<p class="card-text subtitulo">
 						Especie: {{ i.especie }}
 					</p>

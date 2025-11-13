@@ -1,8 +1,8 @@
 export interface Tarjeta {
-	id: string
+	id: string | number;
 	titulo: string
 	descripcion: string
 	precio: number
-	img: string
-	alt: string
+	img?: string
+	alt?: string
 }

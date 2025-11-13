@@ -17,7 +17,34 @@ export class Geckos {
         especie: "lagarto",
         stock: 29,
         precio: 2000,
-        img: "https://images.unsplash.com/photo-1564349683136-77e08dba1ef7",
+        img: "/img/g1.jpg",
+        alt: "espere"
+      },
+         {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/g2.jpg",
+        alt: "espere"
+      },
+         {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/g3.jpg",
+        alt: "espere"
+      },
+         {
+        id:1,
+        nombre: "lagarto argentino",
+        especie: "lagarto",
+        stock: 29,
+        precio: 2000,
+        img: "/img/g4.jpg",
         alt: "espere"
       }
       ]
