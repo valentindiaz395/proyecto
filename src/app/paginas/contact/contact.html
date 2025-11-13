@@ -1,4 +1,4 @@
-<div class="contact-component">
+<div class="contact-component"[formGroup]="nuevomensaje">
   <div class="overlay"></div>
   <div class="contact-content">
     <h2>Contacto</h2>
@@ -6,6 +6,32 @@
       En <strong>Tropical store</strong> queremos acompañarte en cada paso para que tu experiencia con animales exóticos
       sea segura y responsable. Si tenés dudas, querés asesoramiento o simplemente saludarnos, ¡contactanos!
     </p>
+
+    <!--  -->
+    <form [formGroup]="nuevomensaje" (ngSubmit)="enviarMensaje()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input formControlName="nombre" id="nombre" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="Apellido" class="form-label">Apellido</label>
+      <input formControlName="apellido" id="apellido" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Email</label>
+      <input formControlName="email" id="email" type="email" class="form-control">
+    </div>
+     <div class="mb-3">
+      <label for="mensaje" class="form-label">Mensaje</label>
+      <input formControlName="mensaje" id="mensaje" type="text" class="form-control">
+    </div>
+    <!-- 🔹 Corregido: el botón se deshabilita cuando el formulario NO es válido -->
+    <button type="submit" class="btn btn-primary w-100" [disabled]="nuevomensaje.invalid">
+      Enviar 
+    </button>
+  </form>
+
+    <!--  -->
 
     <div class="contact-info">
       <div class="contact-item">

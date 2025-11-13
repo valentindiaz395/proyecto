@@ -1,28 +1,81 @@
-<p>lagarto works!</p>
+<!-- 🔹 Título principal del componente -->
+<h1 class="text-center my-4">Camaleones 🦎</h1>
+
 <div class="container">
 	<div class="row">
+		<!-- 🔹 Recorre el arreglo infocamaleon y genera una tarjeta por cada elemento -->
 		<div *ngFor="let i of infolagarto" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
 			<div class="card">
+				<!-- Imagen principal del camaleón -->
 				<img src="{{ i.img }}" class="card-img-top" alt="{{ i.img }}">
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
-					<p class="card-text">
-						{{ i.nombre }}
+					<h5 class="card-title">Compra tu {{ i.nombre }}</h5>
 
-					</p>
+					<!-- Especie del camaleón -->
 					<p class="card-text">
-						{{ i.especie}}
-
+						Especie: {{ i.especie }}
 					</p>
+
+					<!-- Stock disponible -->
 					<p class="card-text">
-						{{ i.stock}}
-
+						Stock: {{ i.stock }}
 					</p>
+
+					<!-- Precio -->
 					<p class="card-text">
-						{{ i.precio}}
-
+						Precio: ${{ i.precio }}
 					</p>
-					<a href="#" class="btn btn-primary">Go somewhere</a>
+
+					<!-- 🔹 Botón que abre el modal y ejecuta el método vermas(i) -->
+					<button type="button" class="btn btn-primary w-100 mb-2"
+					 data-bs-toggle="modal" data-bs-target="#vermas" (click)="vermas(i)">
+					      Ver más
+					</button>
 				</div>
 			</div>
 		</div>
+	</div>
+</div>
+
+<!-- 🔹 Modal: se abre al hacer clic en "Ver más" -->
+<div class="modal fade" id="vermas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+
+			<!-- Encabezado del modal -->
+			<div class="modal-header">
+				<!-- Nombre del camaleón seleccionado -->
+				<h1 class="modal-title fs-5" id="exampleModalLabel">{{productoseleccionado?.nombre}}</h1>
+				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+			</div>
+
+			<!-- Cuerpo del modal -->
+			<div class="modal-body">
+
+				<!-- Imagen del camaleón -->
+				<div class="text-center mb-3">
+					<img src="{{productoseleccionado?.img}}" alt="{{productoseleccionado?.alt}}" class="img-fluid rounded">
+				</div>
+
+				<!-- 🔹 Descripción del camaleón -->
+				<p><strong>Descripción:</strong></p>
+				<p>{{productoseleccionado?.descripcion}}</p>
+
+				<!-- 🔹 Información extra: precio y stock -->
+				<p><strong>Precio:</strong> ${{productoseleccionado?.precio}}</p>
+				<p><strong>Stock disponible:</strong> {{productoseleccionado?.stock}}</p>
+			</div>
+
+			<!-- Pie del modal -->
+			<div class="modal-footer d-flex justify-content-between">
+				<!-- Botón de cierre -->
+				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+
+				<!-- 🔹 Botón "Comprar" -->
+				<button type="button" class="btn btn-success" (click)="comprar(productoseleccionado)">
+					Comprar
+				</button>
+			</div>
+		</div>
+	</div>
+</div>

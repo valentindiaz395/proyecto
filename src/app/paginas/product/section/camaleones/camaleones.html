@@ -1,30 +1,36 @@
 <div class="container">
 	<div class="row">
-		<!-- recorre conexiones o arre -->
+		<!-- 🔹 Recorre el arreglo infocamaleon y genera una tarjeta por cada elemento -->
 		<div *ngFor="let i of infocamaleon" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
 			<div class="card">
 				<img src="{{ i.img }}" class="card-img-top" alt="{{ i.img }}">
 				<div class="card-body">
 					<h5 class="card-title">Card title</h5>
+
+					<!-- Nombre del animal -->
 					<p class="card-text">
 						{{ i.nombre }}
-
 					</p>
+
+					<!-- Especie -->
 					<p class="card-text">
 						{{ i.especie}}
-
 					</p>
+
+					<!-- Stock disponible -->
 					<p class="card-text">
-						{{ i.stock}}
-
+						Stock: {{ i.stock}}
 					</p>
+
+					<!-- Precio -->
 					<p class="card-text">
-						{{ i.precio}}
-
+						Precio: ${{ i.precio}}
 					</p>
+
+					<!-- 🔹 Botón que abre el modal y ejecuta el método vermas(i) -->
 					<button type="button" class="btn btn-primary" data-bs-toggle="modal"
 					 data-bs-target="#vermas" (click)="vermas(i)">
-					      Ver mas
+					      Ver más
 					</button>
 				</div>
 			</div>
@@ -32,24 +38,46 @@
 	</div>
 </div>
 
-<!-- Modal -->
+<!-- 🔹 Modal: se abre al hacer clic en "Ver más" -->
 <div class="modal fade" id="vermas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
 	<div class="modal-dialog">
 		<div class="modal-content">
+
+			<!-- Encabezado del modal -->
 			<div class="modal-header">
+				<!-- Nombre del producto seleccionado -->
 				<h1 class="modal-title fs-5" id="exampleModalLabel">{{productoseleccionado?.nombre}}</h1>
 				<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 			</div>
+
+			<!-- Cuerpo del modal -->
 			<div class="modal-body">
 
-			    <div class="modal-body">
-					<img src="{{productoseleccionado?.img}}" alt="{{productoseleccionado?.alt}} ">
+				<!-- Imagen del producto -->
+				<div class="text-center mb-3">
+					<img src="{{productoseleccionado?.img}}" alt="{{productoseleccionado?.alt}}" class="img-fluid rounded">
 				</div>
+
+				<!-- 🔹 Nueva descripción del producto -->
+				<!-- Muestra el texto 'descripcion' del objeto seleccionado -->
+				<p><strong>Descripción:</strong></p>
+				<p>{{productoseleccionado?.descripcion}}</p>
+
+				<!-- 🔹 Información extra: precio y stock -->
+				<p><strong>Precio:</strong> ${{productoseleccionado?.precio}}</p>
+				<p><strong>Stock disponible:</strong> {{productoseleccionado?.stock}}</p>
 			</div>
 			
-			<div class="modal-footer">
+			<!-- Pie del modal -->
+			<div class="modal-footer d-flex justify-content-between">
+				<!-- Botón de cierre -->
 				<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-			
+
+				<!-- 🔹 Nuevo botón "Comprar" -->
+				<!-- Por ahora muestra un mensaje en consola al hacer clic -->
+				<button type="button" class="btn btn-success" (click)="comprar(productoseleccionado)">
+					Comprar
+				</button>
 			</div>
 		</div>
 	</div>

@@ -64,17 +64,15 @@ body {
 /* ===============================
    🛒 Botón de compra animado
    =============================== */
-.comprar-btn {
-  background: linear-gradient(90deg, #000000);
+.btn-primary {
+  background: linear-gradient( #000000);
   border: none;
   border-radius: 30px;
   padding: 10px 25px;
   font-weight: 600;
   color: white;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 10px rgb(0, 0, 0);
-  text-decoration: none;
-  display: inline-block;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
 }
 
 .comprar-btn:hover {

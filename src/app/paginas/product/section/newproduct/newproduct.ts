@@ -3,17 +3,18 @@ import { FormGroup, FormControl, ReactiveFormsModule, Validators } from '@angula
 import { Tarjeta } from '../../../../models/tarjeta';
 import { CommonModule } from '@angular/common';
 /*
-FormGroup:directiva de formularios que agrupa una serie de datos
-,FormControl:utilizando en conjunto con FormGroup para tomar valor de una propiredad individual en un formulario
-,ReactiveFormsModule: activa el uso de formularios reactivo-> se ejecutan mediante una accion y se relacion HTML (interfaz graficas) con TS (LOGICA)
-,Validators: pide que un valor exista o sea validado como necesaario
+FormGroup: directiva de formularios que agrupa una serie de datos.
+FormControl: se usa con FormGroup para tomar valor de una propiedad individual en un formulario.
+ReactiveFormsModule: activa el uso de formularios reactivos -> se ejecutan mediante acciones y relacionan HTML (interfaz gráfica) con TS (lógica).
+Validators: valida campos, por ejemplo, que sean requeridos o cumplan condiciones.
 */
 
 @Component({
   selector: 'app-newproduct',
+  standalone: true, // 🔹 NECESARIO si usas 'imports' dentro del decorador
   imports: [ReactiveFormsModule, CommonModule],
   templateUrl: './newproduct.html',
-  styleUrl: './newproduct.css',
+  styleUrls: ['./newproduct.css'], // 🔹 'styleUrl' → 'styleUrls' (en plural)
 })
 export class Newproduct {
   nuevoproducto = new FormGroup({
@@ -22,16 +23,17 @@ export class Newproduct {
     precio: new FormControl(null, Validators.required),
     img: new FormControl(''),
     alt: new FormControl('')
-  })
+  });
+
   /*
-  coleccionar productos  de tipo tajerta (respeta la estructura de la)
+  coleccionar productos de tipo tarjeta (respeta la estructura del modelo Tarjeta)
   */
   coleccionproductos: Tarjeta[] = [];
 
-  private contadorid = 1
+  private contadorid = 1;
 
   /**
-   * @description
+   * @description Crea una nueva tarjeta y la agrega al arreglo de productos
    */
   creartarjeta() {
     if (this.nuevoproducto.valid) {
@@ -40,14 +42,12 @@ export class Newproduct {
         titulo: this.nuevoproducto.value.titulo!,
         descripcion: this.nuevoproducto.value.descripcion!,
         precio: this.nuevoproducto.value.precio!
-      }
-      this.coleccionproductos.push(nuevaTarjeta)
+      };
+      this.coleccionproductos.push(nuevaTarjeta);
 
       console.log("nueva tarjeta agregada: ", nuevaTarjeta);
       console.log("estado de la coleccion actual: ", this.coleccionproductos);
       this.nuevoproducto.reset();
     }
-
   }
-
 }

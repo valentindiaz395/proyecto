@@ -1,23 +1,29 @@
 <div class="container">
-	<h1>Nuevo producto</h1>
-	inaertamos directiva formGroup en una etiqueta 
-	<form [formGroup]="nuevoproducto" (ngSubmit)="creartarjeta()" >
-		<div class="mb-3">
-			<label for="titulo" class="form-label">Titulo</label>
-			<input formControlName="titulo" id="titulo" type="text" class="form-control">
-		</div>
-		<div class="mb-3">
-			<label formControlName="descripcion" for="descripcion" class="form-label">Titulo</label>
-			<input id="descripcion" type="text" class="form-control">
-		</div>
-		<div class="mb-3">
-			<label formControlName="precio" for="precio" class="form-label">Titulo</label>
-			<input id="precio" type="text" class="form-control">
-		</div>
-		<button type="submit" class="btn btn-primary w-100" [disabled]="nuevoproducto"></button>
-	</form>
-	<ul class="list-group"  *ngFor="let tarjeta of coleccionproductos">
-  <li class="list-group-item">{{tarjeta.titulo}} = {{tarjeta.precio}}</li>
->
-</ul>
+  <h1>Nuevo producto</h1>
+  <!-- Insertamos directiva formGroup en una etiqueta form -->
+  <form [formGroup]="nuevoproducto" (ngSubmit)="creartarjeta()">
+    <div class="mb-3">
+      <label for="titulo" class="form-label">Título</label>
+      <input formControlName="titulo" id="titulo" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="descripcion" class="form-label">Descripción</label>
+      <input formControlName="descripcion" id="descripcion" type="text" class="form-control">
+    </div>
+    <div class="mb-3">
+      <label for="precio" class="form-label">Precio</label>
+      <input formControlName="precio" id="precio" type="text" class="form-control">
+    </div>
+    <!-- 🔹 Corregido: el botón se deshabilita cuando el formulario NO es válido -->
+    <button type="submit" class="btn btn-primary w-100" [disabled]="nuevoproducto.invalid">
+      Agregar producto
+    </button>
+  </form>
+
+  <!-- 🔹 Corregido: *ngFor debe ir en el <li> no en el <ul> -->
+  <ul class="list-group">
+    <li class="list-group-item" *ngFor="let tarjeta of coleccionproductos">
+      {{ tarjeta.titulo }} = {{ tarjeta.precio }}
+    </li>
+  </ul>
 </div>

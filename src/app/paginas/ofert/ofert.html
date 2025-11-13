@@ -1,24 +1,54 @@
-<h1 id="titleOfert">Ofertas increíbles</h1>
+<<!-- Título principal de la sección. Se muestra en la parte superior. -->
+<!-- El texto viene de la variable 'tituloOferta' del archivo TypeScript -->
+<h1 id="titleOfert">{{ tituloOferta }}</h1>
 
 <div class="container">
 	<div class="row">
+		<!-- *ngFor recorre el arreglo 'animalesOfertas' definido en el componente -->
+		<!-- Por cada elemento del arreglo (llamado 'i'), se genera una columna (una tarjeta) -->
 		<div *ngFor="let i of animalesOfertas" class="col-lg-3 col-md-6 col-sm-12 col-xs-12 mb-4">
+
+			<!-- Cada columna contiene una tarjeta (Bootstrap card) -->
 			<div class="card product-card">
-				<img src="{{ i.img }}" class="card-img-top" alt="{{ i.img }}">
+
+				<!-- Imagen del animal -->
+				<!-- 'src' se obtiene del campo i.img -->
+				<!-- 'alt' se obtiene del campo i.alt -->
+				<img src="{{ i.img }}" class="card-img-top" alt="{{ i.alt }}">
+
+				<!-- Cuerpo del contenido de la tarjeta -->
 				<div class="card-body">
-					<h5 class="card-title">Card title</h5>
+
+					<!-- 🔹 Título dinámico de la tarjeta -->
+					<!-- Este título es compartido con el encabezado principal -->
+					<!-- Si cambia 'tituloOferta' en el componente, cambia en todas las tarjetas -->
+					<h5 class="card-title">{{ tituloOferta }}</h5>
+
+					<!-- 🔹 Subtítulo con el nombre del animal -->
+					<!-- Muestra la propiedad 'nombre' del objeto actual (i) -->
 					<p class="card-text subtitulo">
 						{{ i.nombre }}
 					</p>
+
+					<!-- 🔹 Segunda línea de texto: especie del animal -->
+					<!-- También viene del objeto actual (i.especie) -->
 					<p class="card-text subtitulo">
-						{{ i.especie}}
+						{{ i.especie }}
 					</p>
+
+					<!-- 🔹 Muestra el stock disponible -->
+					<!-- Interpolación simple de i.stock -->
 					<p class="card-text">
-						Stock: {{ i.stock}}
+						Stock: {{ i.stock }}
 					</p>
+
+					<!-- 🔹 Precio del animal -->
+					<!-- Se muestra con el símbolo $ y el valor numérico de i.precio -->
 					<p class="card-text precio">
-						${{ i.precio}}
+						${{ i.precio }}
 					</p>
+
+					<!-- 🔹 Botón de compra (no tiene acción aún, pero visualmente completa la tarjeta) -->
 					<a href="#" class="btn btn-primary comprar-btn">Comprar</a>
 				</div>
 			</div>
